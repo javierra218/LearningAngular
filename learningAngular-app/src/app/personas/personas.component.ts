@@ -1,11 +1,21 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-
-@Component ({
-    selector: 'app-personas',
-    templateUrl: './personas.component.html',
-    styleUrls: ['./personas.component.css']
+@Component({
+  selector: 'app-personas',
+  templateUrl: './personas.component.html',
+  styleUrls: ['./personas.component.css'],
 })
 export class PersonasComponent {
-    
+  deshabilitar = false;
+  mensaje = 'No se ha agregado ninguna persona';
+  titulo = '';
+
+  agregarPersona() {
+    this.mensaje = 'Persona Agregada';
+  }
+
+//   modificarTitulo(event: Event) {
+//     console.log('entrando a metodo modificar titulo');
+//     this.titulo = (<HTMLInputElement>event.target).value;
+//   }
 }
